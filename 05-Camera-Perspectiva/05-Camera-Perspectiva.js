@@ -23,15 +23,15 @@ function main() {
 	scene 			= new THREE.Scene();
 	camera 			= new THREE.PerspectiveCamera();
 	
-	let plano 			= new THREE.Mesh(	new THREE.PlaneGeometry(10000, 10000, 1, 1), 
+	let plano 			= new THREE.Mesh(	new THREE.PlaneGeometry(500, 500, 1, 1), 
 											new THREE.MeshBasicMaterial({color: 0x055904}) );
 
 	plano.rotation.x = -Math.PI / 2; 	// Rotacionando o plano para ficar horizontal
-	plano.position.y = -12.0; 			// Ajustando a posição do plano para ficar abaixo da câmera
+	plano.position.y = -1.0; 			// Ajustando a posição do plano para ficar abaixo da câmera
 	plano.name = "plano"; 				// Nomeando o plano
 	scene.add(plano);
 
-	scene.add(new THREE.AxesHelper(1000, 1000, 1000)); // Adicionando um AxesHelper para visualização
+	scene.add(new THREE.AxesHelper(5.0, 5.0, 5.0)); // Adicionando um AxesHelper para visualização
 
 	renderer.render(scene, camera);
 };
